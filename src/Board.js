@@ -140,7 +140,8 @@
      var temp = 0;
      var major = majorDiagonalColumnIndexAtFirstRow;
      major = Math.max(major, 0)
-
+     var size = this.get('n')
+     console.log(size)
      for (var i = major; i < this.attributes.n; i++) {
       var row = i - major;
       

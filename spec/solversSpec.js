@@ -26,7 +26,8 @@ describe('solvers', function() {
       _.range(1, 9).map(function(n) {
         var solutionCount = countNRooksSolutions(n);
         var expectedSolutionCount = [1, 1, 2, 6, 24, 120, 720, 5040, 40320][n];
-
+                console.log(expectedSolutionCount)
+        console.log(solutionCount)
         expect(solutionCount).to.be.equal(expectedSolutionCount);
       });
     });
@@ -47,6 +48,8 @@ describe('solvers', function() {
 
         expect(solutionBoard.get('n')).to.equal(n);
         expect(numPieces).to.equal(n);
+        // console.log(numPieces)
+        // console.log(solutionBoard.hasAnyQueensConflicts())
         expect(solutionBoard.hasAnyQueensConflicts()).to.be.equal(false);
       });
 
